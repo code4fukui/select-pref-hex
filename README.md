@@ -1,32 +1,28 @@
 # select-pref
  
-都道府県選択タグ, select-prefタグ
+都道府県選択タグ, select-pref-hexタグ
 
 ## sample
 
-https://code4fukui.github.io/select-pref/
+https://code4fukui.github.io/select-pref-hex/
 
 ## usage
 
+都道府県を選択するとハッシュが付きます
 ```html
-<script type="module" src="https://code4fukui.github.io/select-pref/select-pref.js"></script>
+<script type="module" src="https://code4fukui.github.io/select-pref-hex/select-pref-hex.js"></script>
 
-<select-pref id="pref"></select-pref><br>
-
-<p><input id="selected"></p>
-<p><button id="set">福井県をセット</button></p>
-
-<script type="module">
-pref.onchange = () => {
-  selected.value = pref.value ? pref.value + "が選択されました" : "都道府県を選択してください";
-};
-set.onclick = () => {
-  pref.value = "福井県";
-};
-</script>
+<select-pref-hex></select-pref-hex>
 ```
 
-## code
+## reference
+
+- [世界を六角形で表したい - cucumber flesh](https://uribo.hatenablog.com/entry/2017/10/20/100717)
+
+## how to make
+
+[世界を六角形で表したい - cucumber flesh](https://uribo.hatenablog.com/entry/2017/10/20/100717) のデータをJavaScript用に加工
+
 
 ```js
 const prefhex = [
