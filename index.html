@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+</head><body>
+
+<h1>select-pref-hex</h1>
+
+<script type="module" src="select-pref-hex.js"></script>
+<select-pref-hex></select-pref-hex>
+
+<div id=contents></div>
+
+<style>
+body {
+  font-family: sans-serif;
+  margin-bottom: 70vh;
+  color: #555;
+}
+select-pref-hex {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+@media screen and (max-width: 580px) {
+  select-pref-hex {
+    zoom: 65%;
+  }
+}
+@media screen and (max-height: 460px) {
+  select-pref-hex {
+    zoom: 65%;
+  }
+}
+</style>
+
+<script type="module">
+import { DummyText } from "https://code4fukui.github.io/dummy-text/dummy-text.js";
+import { JAPAN_PREF_EN, JAPAN_PREF } from "https://js.sabae.cc/JAPAN_PREF.js";
+
+for (let i = 0; i < JAPAN_PREF.length; i++) {
+  const h2 = document.createElement("h2");
+  h2.textContent = JAPAN_PREF[i];
+  const a = document.createElement("a");
+  a.id = JAPAN_PREF_EN[i];
+  contents.appendChild(a);
+  contents.appendChild(h2);
+  const span = document.createElement("span");
+  span.textContent = JAPAN_PREF[i] + "のことです。"
+  contents.appendChild(span);
+  contents.appendChild(new DummyText(300));
+}
+</script>
+
+<hr>
+Lib: <a href=https://github.com/code4fukui/select-pref-hex>select-pref-hex</a><br>
+Lib: <a href=https://js.sabae.cc/JAPAN_PREF.js>JAPAN_PREF</a><br>
+Lib: <a href=https://github.com/code4fukui/dummy-text>dummy-text</a><br>
+
