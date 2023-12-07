@@ -6,6 +6,7 @@
 <script type="module" src="select-pref-hex.js"></script>
 <select-pref-hex></select-pref-hex>
 
+<label><input type="checkbox" id=chk>add dummy-text</label><br>
 <div id=contents></div>
 
 <style>
@@ -47,6 +48,9 @@ for (let i = 0; i < JAPAN_PREF.length; i++) {
   contents.appendChild(span);
   contents.appendChild(new DummyText(300));
 }
+
+chk.oninput = () => contents.style.display = chk.checked ? "block" : "none";
+chk.oninput();
 </script>
 
 <hr>
