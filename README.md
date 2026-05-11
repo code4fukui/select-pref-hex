@@ -1,4 +1,6 @@
 # select-pref
+
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
  
 都道府県選択タグ, select-pref-hexタグ
 
@@ -22,7 +24,6 @@ https://code4fukui.github.io/select-pref-hex/
 ## how to make
 
 [世界を六角形で表したい - cucumber flesh](https://uribo.hatenablog.com/entry/2017/10/20/100717) のデータをJavaScript用に加工
-
 
 ```js
 const prefhex = [
